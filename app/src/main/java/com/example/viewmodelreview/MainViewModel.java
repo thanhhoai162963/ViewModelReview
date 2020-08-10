@@ -10,12 +10,14 @@ import androidx.lifecycle.ViewModel;
 import java.util.Random;
 
 public class MainViewModel extends ViewModel implements LifecycleObserver {
-    MutableLiveData<Integer> mData = new MutableLiveData<>();
-    public void Random(int bound){
-        int value = new Random().nextInt(bound);
-        mData.setValue(value);
+    MutableLiveData<String> mData = new MutableLiveData<>();
+
+
+
+    public void chuoi(String chuoi){
+        mData.setValue(chuoi);
     }
-    public LiveData<Integer> getData(){
+    public LiveData<String> getData(){
         return mData;
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
