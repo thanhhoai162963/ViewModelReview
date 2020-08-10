@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("bbb",String.valueOf(integer));
             }
         });
+        getLifecycle().addObserver(mainViewModel);
         mainViewModel.Random(10);
 
     }
